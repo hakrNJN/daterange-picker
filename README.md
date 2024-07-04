@@ -6,7 +6,7 @@
 </div>
 
 <p align='center'>
-  <a href="https://www.npmjs.com/package/react-date-range-picker-18">
+  <a href="https://www.npmjs.com/package/flatui-date-picker">
   <img alt="NPM" src="https://img.shields.io/badge/v1.0.3-npm-orange"></a>
   <p align='center'>⚛️📆 React Js based date/range picker, unlike other range pickers it uses single calendar to select the range. </p>
   <p align='center'>Compatible with React 18💓 </p>
@@ -35,14 +35,14 @@
 ## Installation
 
 ```bash
-$ npm i daterange-picker
+$ npm i flatui-Date-picker
 ```
 
 
 ## Usage
 
 ```javascript
-import RangePicker from 'daterange-picker'
+import RangePicker from 'flatui-Date-picker'
 
 <RangePicker
           onDateSelected={onDateSelect}

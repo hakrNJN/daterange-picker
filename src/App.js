@@ -1,6 +1,6 @@
 import './App.css';
 import RangePicker from './components';
-import logo from './logo.svg';
+import logo from './images/snapshot.png';
 
 const onDateSelect = (startDate, endDate) => {
   console.log(
@@ -36,7 +36,9 @@ function App() {
           // rangeTillEndOfDay
           // selectTime
         />
-        <p> React Js based date/range picker, unlike other range pickers it uses single calendar to select the range.</p>
+        <p><strong>React Js based date/range picker,</strong> </p>
+        <p> unlike other range pickers it uses single calendar to select the range.</p>
+        <br/>
         <p> Originally Developed By <a
         className="App-link"
         href="https://github.com/aadilhasan"

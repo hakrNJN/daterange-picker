@@ -1,52 +1,75 @@
 const path = require('path');
+const autoprefixer = require('autoprefixer');
+// Set environment variables for production build
+process.env.BABEL_ENV = 'production';
+process.env.NODE_ENV = 'production';
+
 
 module.exports = {
-  entry: './src/component/index.js', // Entry point of your library
+  entry: './src/components', // Entry point for the application
   output: {
-    path: path.resolve(__dirname, 'dist'), // Output directory
-    filename: 'index.js', // Output file name
-    library: 'DateRange-picker', // The name of the global variable the library will be assigned to when loaded via script tag
-    libraryTarget: 'umd', // UMD format to support various module systems
-    globalObject: 'this', // Avoid issues with `window` being undefined on Node
+    path: path.resolve(__dirname, 'dist'), // Output directory for the build
+    filename: 'index.js', // Output filename
+    libraryTarget: 'commonjs2',// Export library as CommonJS
+    publicPath: '/daterange-picker/'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // Automatically resolve certain extensions
+    modules: [path.resolve('./src'), path.resolve('./node_modules')], // Directories to resolve modules
+    alias: {
+      // Aliases for easier imports
+      utils: path.resolve(__dirname, './src/utils/index.js'),
+      const: path.resolve(__dirname, './src/const/index.js')
+    }
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, // Transpile both .js and .jsx files
-        exclude: /node_modules/, // Exclude node_modules
+        test: /\.js|jsx$/, // Apply this rule to .js and .jsx files
+        include: path.resolve(__dirname, 'src'), // Include source directory
+        exclude: /(node_modules|bower_components|dist)/, // Exclude these directories
         use: {
-          loader: 'babel-loader', // Use Babel loader for JS files
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
-        },
+          loader: 'babel-loader' // Use Babel loader for JS files
+        }
       },
       {
-        test: /\.(scss|css)$/, // Handle both SCSS and CSS files
-        use: ['style-loader', 'css-loader', 'sass-loader'], // Use style-loader, css-loader, and sass-loader
+        test: /\.scss$/, // Apply this rule to .scss files
+        include: path.resolve(__dirname, 'src'), // Include source directory
+        use: [
+          'style-loader', // Injects styles into DOM
+          'css-loader', // Resolves CSS imports
+          'sass-loader' // Compiles Sass to CSS
+        ]
       },
       {
-        test: /\.(png|jpg|gif|svg)$/, // Handle image files
-        use: ['file-loader'], // Use file-loader
-      },
-    ],
+        test: /\.css$/, // Apply this rule to .css files
+        use: [
+          'style-loader', // Injects styles into DOM
+          'css-loader', // Resolves CSS imports
+          {
+            loader: 'postcss-loader', // PostCSS loader with plugins
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                require('postcss-flexbugs-fixes'),
+                autoprefixer({
+                  overrideBrowserslist: [
+                    '>1%',
+                    'last 4 versions',
+                    'Firefox ESR',
+                    'not ie < 9' // React doesn't support IE8 anyway
+                  ],
+                  flexbox: 'no-2009'
+                })
+              ]
+            }
+          }
+        ]
+      }
+    ]
   },
   externals: {
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'react',
-      root: 'React',
-    },
-    'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'react-dom',
-      root: 'ReactDOM',
-    },
+    react: 'commonjs react',
+    'react-dom': 'commonjs react-dom'
   },
-  resolve: {
-    extensions: ['.js', '.jsx', '.scss', '.css'], // Resolve these extensions
-  },
-  mode: 'production', // Set mode to production
 };
