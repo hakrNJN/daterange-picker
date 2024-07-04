@@ -15,7 +15,7 @@ const sidebar = ({
 
 }) => {
 
-  const handleClick = ()=>{}
+ 
 
   return (
     <SidePanel onToday={onToday} on3Day={on3Day} onSevenday={onSevenday} OnMonth={OnMonth} on3Month={on3Month}

@@ -80,17 +80,17 @@ const Footer = ({
   );
 };
 
-const Buttons = ({ disableSelect, onClose }) => {
-  return (
-    <div className="buttons">
+// const Buttons = ({ disableSelect, onClose }) => {
+//   return (
+//     <div className="buttons">
      
-      <button disabled={disableSelect} className="select" onClick={onClose}>
-        {' '}
-        Select{' '}
-      </button>
-    </div>
-  );
-};
+//       <button disabled={disableSelect} className="select" onClick={onClose}>
+//         {' '}
+//         Select{' '}
+//       </button>
+//     </div>
+//   );
+// };
 
 const DateHolder = ({ heading = '', date = '', time, extraClass = '' }) => {
   return (

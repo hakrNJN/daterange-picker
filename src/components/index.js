@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 // import React from 'react';
 // import ReactDOM from 'react-dom';
 
@@ -208,6 +209,7 @@ const RangePicker = (props) => {
   const isVisibilityControlled = typeof visible === 'boolean';
 
   const [showCalendar, setShowCalendar] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [style, setStyle] = useState(hiddenStyle);
 
   useEffect(() => {
