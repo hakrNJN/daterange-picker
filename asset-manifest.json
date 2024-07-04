@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/daterange-picker/static/css/main.68ac4b55.css",
+    "main.css": "/daterange-picker/static/css/main.671133b8.css",
     "main.js": "/daterange-picker/static/js/main.9e1c12b1.js",
     "static/media/snapshot.png": "/daterange-picker/static/media/snapshot.d050c655e841f8746554.png",
     "index.html": "/daterange-picker/index.html",
-    "main.68ac4b55.css.map": "/daterange-picker/static/css/main.68ac4b55.css.map",
+    "main.671133b8.css.map": "/daterange-picker/static/css/main.671133b8.css.map",
     "main.9e1c12b1.js.map": "/daterange-picker/static/js/main.9e1c12b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.68ac4b55.css",
+    "static/css/main.671133b8.css",
     "static/js/main.9e1c12b1.js"
   ]
 }
