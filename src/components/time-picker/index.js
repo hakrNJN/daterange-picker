@@ -1,5 +1,5 @@
 
-// import React from 'react';
+// import * as React  from 'react';
 // import './index.scss';
 // import Picker from './picker';
 
@@ -87,7 +87,8 @@
 
 // export default TimePicker;
 
-import React, { useEffect, useState } from 'react';
+import * as React from 'react';
+import { useEffect, useState } from 'react';
 import './index.scss';
 import Picker from './picker';
 

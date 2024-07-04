@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import ControlledUpdate from '../controlled-update';
 import DateGrid from '../date-grid';
 import './index.scss';

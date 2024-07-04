@@ -1,4 +1,4 @@
-// import React from 'react';
+// import * as React  from 'react';
 
 // class ControlledUpdate extends React.Component {
 //   shouldComponentUpdate({ shouldUpdate }) {
@@ -12,7 +12,7 @@
 // export default ControlledUpdate;
 
 
-import React from 'react';
+import * as React from 'react';
 
 const ControlledUpdate = React.memo(({ shouldUpdate, children }) => {
   return <React.Fragment>{children}</React.Fragment>;
@@ -20,7 +20,7 @@ const ControlledUpdate = React.memo(({ shouldUpdate, children }) => {
 
 export default ControlledUpdate;
 
-// import React, { useEffect, useState } from 'react';
+// import * as React , { useEffect, useState } from 'react';
 
 // const ControlledUpdate = ({ shouldUpdate, children }) => {
 //   const [shouldRender, setShouldRender] = useState(true);

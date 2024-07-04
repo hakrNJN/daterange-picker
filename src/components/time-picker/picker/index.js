@@ -1,4 +1,4 @@
-// import React from 'react';
+// import * as React  from 'react';
 // import './index.scss';
 
 // class Picker extends React.Component {
@@ -61,7 +61,8 @@
 // export default Picker;
 
 
-import React, { useEffect, useState } from 'react';
+import * as React from 'react';
+import { useEffect, useState } from 'react';
 import './index.scss';
 
 const Picker = ({ values, onChange, label = '', editable = false }) => {

@@ -1,5 +1,5 @@
 
-// import React, { useEffect, useState } from 'react';
+// import * as React , { useEffect, useState } from 'react';
 
 // import {
 //   dateToInt,
@@ -550,7 +550,8 @@
 //     </Context.Consumer>
 //   );
 
-import React, { useCallback, useEffect, useMemo, useReducer, useRef } from 'react';
+import * as React from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef } from 'react';
 import { monthsFull, monthsShort } from '../../const';
 import {
   dateToInt,
