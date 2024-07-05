@@ -203,8 +203,8 @@ const RangePicker = (props) => {
     dateFormat,
     placeholderText,
   } = props
-  const calendarRef = useRef();
-  const popupRef = useRef();
+  const calendarRef = useRef(null);
+  const popupRef = useRef(null);
 
   const isVisibilityControlled = typeof visible === 'boolean';
 
