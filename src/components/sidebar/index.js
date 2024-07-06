@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { noHandler } from '../../utils';
 import './index.scss';
 const sidebar = ({
@@ -14,8 +15,6 @@ const sidebar = ({
   provider,
 
 }) => {
-
- 
 
   return (
     <SidePanel onToday={onToday} on3Day={on3Day} onSevenday={onSevenday} OnMonth={OnMonth} on3Month={on3Month}
