@@ -9,11 +9,13 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "build": "webpack --config webpack.config.js && react-scripts build",
     "start": "react-scripts start",
     "test": "react-scripts test",
     "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "webpack --config webpack.config.js  && react-scripts build",
+    "prepublishOnly": "npm run build",
+    "link-dist": "npm run build && cd dist && npm link"
   },
   "eslintConfig": {
     "extends": [
