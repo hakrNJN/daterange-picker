@@ -1,7 +1,7 @@
 {
   "name": "flatui-date-picker",
   "version": "1.0.1-beta",
-  "main": "dist/index.js",
+  "main": "dist/bundle.js",
   "homepage": "https://hakrnjn.github.io/daterange-picker/",
   "peerDependencies": {
     "react": "^17.0.0 || ^18.3.1",

@@ -1,24 +1,24 @@
-// import * as React  from 'react';
-
-// class ControlledUpdate extends React.Component {
-//   shouldComponentUpdate({ shouldUpdate }) {
-//     return shouldUpdate;
-//   }
-//   render() {
-//     return this.props.children;
-//   }
-// }
-
-// export default ControlledUpdate;
-
-
 import * as React from 'react';
 
-const ControlledUpdate = React.memo(({ shouldUpdate, children }) => {
-  return <React.Fragment>{children}</React.Fragment>;
-}, (prevProps, nextProps) => !nextProps.shouldUpdate);
+class ControlledUpdate extends React.Component {
+  shouldComponentUpdate({ shouldUpdate }) {
+    return shouldUpdate;
+  }
+  render() {
+    return this.props.children;
+  }
+}
 
 export default ControlledUpdate;
+
+
+// import * as React from 'react';
+
+// const ControlledUpdate = React.memo(({ shouldUpdate, children }) => {
+//   return <React.Fragment>{children}</React.Fragment>;
+// }, (prevProps, nextProps) => !nextProps.shouldUpdate);
+
+// export default ControlledUpdate;
 
 // import * as React , { useEffect, useState } from 'react';
 

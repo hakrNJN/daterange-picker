@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { formatDate } from '../../utils';
-import { Context } from '../context';
+import Context from '../context';
 import './index.scss';
 
 const Placeholder = ({

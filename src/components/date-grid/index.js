@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Component } from 'react';
 import { dateToInt, getCustomDateObject, getDays, getDaysArray } from '../../utils';
-import { Context } from '../context';
+import Context from '../context';
 import Day from './day';
 import DaysNames from './days-names';
 

@@ -7,7 +7,7 @@ process.env.BABEL_ENV = 'production';
 process.env.NODE_ENV = 'production';
 
 module.exports = {
-  entry: './src/components', // Entry point for the application
+  entry: 'index.js', // Entry point for the application
   output: {
     path: path.resolve(__dirname, 'dist'), // Output directory for the build
     filename: 'bundle.js', // Output filename
@@ -26,6 +26,7 @@ module.exports = {
     }
   },
   module: {
+
     rules: [
       {
         test: /\.(js|jsx)$/, // Apply this rule to .js and .jsx files
@@ -43,7 +44,7 @@ module.exports = {
       },
       {
         test: /\.(ts|tsx)$/, // Apply this rule to .ts and .tsx files
-        include: path.resolve(__dirname, 'src'), // Include source directory
+        // include: path.resolve(__dirname, 'src'), // Include source directory
         exclude: /node_modules/, // Exclude node_modules
         use: 'ts-loader'
       },
